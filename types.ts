@@ -4,33 +4,13 @@
 */
 
 import * as THREE from 'three';
-import { ThreeElements } from '@react-three/fiber';
 
 // Extend JSX.IntrinsicElements to include Three.js elements (mesh, boxGeometry, etc.)
 // This fixes errors where these elements are not recognized as valid JSX.
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      ambientLight: any;
-      pointLight: any;
-      spotLight: any;
-      color: any;
-      fog: any;
-      mesh: any;
-      group: any;
-      perspectiveCamera: any;
-      cylinderGeometry: any;
-      meshStandardMaterial: any;
-      meshBasicMaterial: any;
-      meshPhysicalMaterial: any;
-      boxGeometry: any;
-      planeGeometry: any;
-      sphereGeometry: any;
-      capsuleGeometry: any;
-      octahedronGeometry: any;
-      torusGeometry: any;
-      ringGeometry: any;
-      extrudeGeometry: any;
+      [elemName: string]: any;
     }
   }
 }
